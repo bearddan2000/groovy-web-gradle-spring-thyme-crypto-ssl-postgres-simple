@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <div th:replace="fragments/header :: header"/>
+</head>
+
+<body>
+
+<div th:replace="fragments/nav :: nav"/>
+
+<div class="container">
+  <table id="example" class="display" width="100%">
+    <thead>
+      <th>Id</th>
+      <th>Name</th>
+    </thead>
+    </table>
+
+</div>
+<!-- /.container -->
+
+<div th:replace="fragments/footer :: footer"/>
+<script th:src="@{/js/user.js}" charset="utf-8"></script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+version: '3'
+services:
+
+  java-srv:
+    build: java-srv
+    volumes:
+      - ./java-srv/bin:/usr/src/mymaven
+    ports:
+      - 80:8080
+    depends_on:
+      - db
+    links:
+      - "db:db"
+
+  db:
+    image: postgres
+    environment:
+      - POSTGRES_DB=spring
+      - POSTGRES_USER=maria
+      - POSTGRES_PASSWORD=pass
